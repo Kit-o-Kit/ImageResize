@@ -24,5 +24,5 @@ def lambda_handler(event, context):
       #save the image as png. can be changed to other file type.
       image.save('resizedImage.png')
 
-      bucket = s3.Bucket('s3://sowwyuwu')
+      bucket = s3.Bucket('s3://output_bucket')
       bucket.copy(copy_source, '/resizedImage.png')
