@@ -9,7 +9,7 @@ s3Client = boto3.client('s3')
 
 def lambda_handler(event, context):
       bucket = event["records"]["0"]["s3"]["bucket"]["name"]
-      key = event["records"]["0"]["s3"]["object"]["key"]
+      bucket = event["records"]["0"]["s3"]["object"]["key"]
       
       print(bucket)
       print(key)
